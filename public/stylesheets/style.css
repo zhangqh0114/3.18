@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  border: #00B7FF 1px solid;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+}

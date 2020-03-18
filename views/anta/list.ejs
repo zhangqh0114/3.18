@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+        form{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>anta商品列表</h1>
+    <a href="/anta/new">新增商品</a>
+    <table>
+        <thead>
+            <tr>
+                <th>商品编号</th>
+                <th>商品名字</th>
+                <th>商品价格</th>
+                <th>商品描述</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%products.forEach(item=>{%>
+                <tr data_id=<%= item.id%>>
+                    <td><%= item.pid%></td>
+                    <td><%= item.pname%></td>
+                    <td><%= item.pprice%></td>
+                    <td><%= item.pdesc%></td>
+                    <td><input type="button" value="修改"><input type="button" value="删除"></td>
+                </tr>
+            <%})%>
+        </tbody>
+    </table>
+    <form action="" method="POST">
+        <form action="/anta" method="POST">
+            <label for="">商品编号</label>
+            <p><input type="text" name="pid"></p>
+            <label for="">商品价格</label>
+            <p><input type="text" name="pprice"></p>
+            <label for="">商品描述</label>
+            <p><input type="text" name="pdesc"></p>
+            <p><input type="submit" value="提交"></p>
+        </form>
+    </form>
+</body>
+
+</html>
